@@ -1,171 +1,209 @@
+import { motion } from 'framer-motion'
 import {
   ArrowRight,
   CheckCircle2,
   FileText,
   FolderOpen,
-  Lock,
-  ScanLine,
   Search,
+  Share2,
   ShieldCheck,
+  Workflow,
 } from 'lucide-react'
 
 import Container from '../../layout/Container'
+import heroBg from '../../assets/images/hero-wow.jpg'
 
-function FloatingDocument({ className, icon: Icon, label, color }) {
-  return (
-    <div className={`absolute rounded-2xl border border-white/25 bg-white/90 p-4 shadow-2xl backdrop-blur ${className}`}>
-      <div className={`mb-3 flex h-10 w-10 items-center justify-center rounded-xl ${color}`}>
-        <Icon size={22} />
-      </div>
-      <div className="h-2 w-20 rounded bg-slate-300" />
-      <div className="mt-2 h-2 w-14 rounded bg-orange-400" />
-      <p className="mt-3 text-xs font-bold text-slate-700">{label}</p>
-    </div>
-  )
+const heroParent = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.18,
+    },
+  },
+}
+
+const heroItem = {
+  hidden: { opacity: 0, y: 34 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.65, ease: 'easeOut' },
+  },
 }
 
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0F1E3A] text-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_35%_30%,rgba(249,115,22,0.22),transparent_22%),radial-gradient(circle_at_60%_45%,rgba(59,130,246,0.22),transparent_28%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(15,30,58,0.98),rgba(15,30,58,0.72),rgba(15,30,58,0.45))]" />
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
 
-      <Container className="relative grid min-h-[680px] items-center gap-10 py-20 lg:grid-cols-[1.1fr_0.9fr]">
-        <div>
-          <p className="mb-4 text-sm font-extrabold uppercase tracking-[0.22em] text-orange-400">
+      <div className="absolute inset-0 bg-gradient-to-r from-[#061225]/99 via-[#061225]/75 to-[#061225]/5" />
+
+      <Container className="relative grid min-h-[720px] items-center gap-12 py-20 lg:grid-cols-[1fr_0.9fr]">
+        <motion.div
+          variants={heroParent}
+          initial="hidden"
+          animate="visible"
+          className="max-w-3xl"
+        >
+          <motion.p
+            variants={heroItem}
+            className="mb-5 text-sm font-extrabold uppercase tracking-[0.25em] text-orange-400"
+          >
             Extensys Solutions
-          </p>
+          </motion.p>
 
-          <h1 className="max-w-3xl text-5xl font-extrabold leading-tight lg:text-6xl">
-            Software enterprise pentru procese digitale inteligente.
-          </h1>
+          <motion.h1
+            variants={heroItem}
+            className="max-w-[650px] text-6xl font-black leading-[1.05] tracking-tight"
+          >
+            Transformăm birocrația în{' '}
+            <span className="text-orange-500">procese digitale</span> clare.
+          </motion.h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-200">
-            Dezvoltăm soluții software dedicate managementului documentelor,
-            automatizării fluxurilor de lucru și integrării sistemelor de business.
-          </p>
+          <motion.p
+            variants={heroItem}
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-white"
+          >
+            Construim soluții software enterprise pentru organizații care vor
+            control, trasabilitate și eficiență în gestionarea documentelor și
+            a fluxurilor operaționale.
+          </motion.p>
 
-          <div className="mt-8 flex flex-wrap gap-4">
+          <motion.div
+            variants={heroItem}
+            className="mt-8 flex flex-wrap gap-4"
+          >
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-6 py-4 font-bold text-white transition hover:bg-orange-600"
+              className="inline-flex items-center gap-2 rounded-xl bg-orange-500 px-7 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-orange-400 hover:shadow-[0_12px_35px_rgba(249,115,22,.35)]"
             >
               Solicită demo <ArrowRight size={18} />
             </a>
 
             <a
               href="/solutions"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/40 px-6 py-4 font-bold text-white transition hover:bg-white/10"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/50 bg-white/10 px-7 py-4 font-bold text-white backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-orange-400 hover:bg-white/15"
             >
               Vezi soluțiile <ArrowRight size={18} />
             </a>
-          </div>
+          </motion.div>
 
-          <div className="mt-12 grid max-w-2xl gap-5 sm:grid-cols-3">
+          <motion.div
+            variants={heroItem}
+            className="mt-12 grid max-w-2xl gap-5 sm:grid-cols-3"
+          >
             {[
-              ['Soluții enterprise', 'pentru procese critice'],
-              ['Integrare rapidă', 'cu sisteme existente'],
-              ['Control total', 'asupra fluxurilor digitale'],
+              ['Procese clare', 'fără blocaje birocratice'],
+              ['Trasabilitate', 'pentru fiecare acțiune'],
+              ['Control complet', 'asupra documentelor'],
             ].map(([title, text]) => (
               <div key={title} className="flex items-start gap-3">
                 <CheckCircle2 className="mt-1 text-orange-400" size={24} />
                 <div>
                   <div className="font-bold">{title}</div>
-                  <div className="text-sm text-slate-300">{text}</div>
+                  <div className="text-sm text-slate-200">{text}</div>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        <div className="relative hidden h-[520px] lg:block">
-          <div className="absolute bottom-10 left-6 right-6 h-64 rounded-3xl border border-white/15 bg-slate-950/60 shadow-2xl backdrop-blur">
-            <div className="mx-auto mt-8 h-40 w-72 rounded-2xl border border-blue-300/20 bg-blue-500/10 p-5">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="h-3 w-24 rounded bg-blue-200/70" />
-                <div className="h-3 w-12 rounded bg-orange-400" />
-              </div>
-              <div className="grid grid-cols-3 gap-3">
-                <div className="h-20 rounded-xl bg-white/10" />
-                <div className="h-20 rounded-xl bg-white/20" />
-                <div className="h-20 rounded-xl bg-white/10" />
-              </div>
-            </div>
-          </div>
-
-          <div className="absolute inset-0">
-            <div className="absolute left-[42%] top-[22%] h-56 w-56 rounded-full border border-blue-300/30" />
-            <div className="absolute left-[50%] top-[30%] h-3 w-3 rounded-full bg-orange-400 shadow-[0_0_30px_rgba(249,115,22,0.9)]" />
-            <div className="absolute left-[28%] top-[42%] h-2 w-2 rounded-full bg-orange-400" />
-            <div className="absolute left-[68%] top-[18%] h-2 w-2 rounded-full bg-orange-400" />
-            <div className="absolute left-[72%] top-[52%] h-2 w-2 rounded-full bg-orange-400" />
-          </div>
-
-          <FloatingDocument
-            className="left-6 top-20 rotate-[-8deg]"
-            icon={FileText}
-            label="PDF"
-            color="bg-red-50 text-red-600"
-          />
-
-          <FloatingDocument
-            className="right-10 top-16 rotate-[7deg]"
-            icon={FolderOpen}
-            label="DOC"
-            color="bg-blue-50 text-blue-700"
-          />
-
-          <FloatingDocument
-            className="left-28 bottom-32 rotate-[4deg]"
-            icon={ScanLine}
-            label="SCAN"
-            color="bg-slate-100 text-slate-700"
-          />
-
-          <FloatingDocument
-            className="right-24 bottom-28 rotate-[-5deg]"
-            icon={Search}
-            label="OCR"
-            color="bg-orange-50 text-orange-600"
-          />
-        </div>
-
-        <div className="rounded-3xl bg-white p-8 text-[#0F1E3A] shadow-2xl lg:absolute lg:right-8 lg:top-24 lg:w-[420px]">
-          <h2 className="mb-6 text-2xl font-extrabold">
-            Produse dezvoltate de Extensys Solutions
+        <motion.div
+          initial={{ opacity: 0, y: 44, scale: 0.96 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.75, delay: 0.85, ease: 'easeOut' }}
+          className="mt-45 rounded-[2rem] bg-white/92 p-8 text-[#0F1E3A] shadow-[0_30px_80px_rgba(0,0,0,.35)] backdrop-blur-xl lg:ml-auto lg:w-[460px]"
+        >
+          <h2 className="mb-7 text-2xl font-extrabold">
+            Soluții pentru procese digitale
           </h2>
 
-          <div className="space-y-5">
+          <div className="space-y-6">
             {[
               [
-                FolderOpen,
+                FileText,
                 'EMDoc',
-                'Sistem complet pentru managementul electronic al documentelor.',
+                'Transformă circuitul documentelor într-un proces digital, sigur și complet trasabil.',
+              ],
+              [
+                Share2,
+                'EMDoc B2B Smart Connect',
+                'Extinde digitalizarea dincolo de organizație și conectează automat partenerii de afaceri.',
               ],
               [
                 ShieldCheck,
-                'EMDoc B2B Smart Connect',
-                'Conectare și schimb automatizat de documente între parteneri.',
+                'Soluții enterprise',
+                'Software construit pentru organizații cu procese complexe și cerințe reale de control.',
               ],
-              [
-                Lock,
-                'Soluții custom',
-                'Dezvoltare software adaptată proceselor interne ale companiei.',
-              ],
-            ].map(([Icon, title, text]) => (
-              <div key={title} className="flex gap-4">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
-                  <Icon size={22} />
+            ].map(([Icon, title, text], index) => (
+              <motion.div
+                key={title}
+                initial={{ opacity: 0, y: 18 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.45,
+                  delay: 1.05 + index * 0.12,
+                  ease: 'easeOut',
+                }}
+                className="flex gap-4"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
+                  <Icon size={23} />
                 </div>
                 <div>
-                  <h3 className="font-bold">{title}</h3>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-600">{text}</p>
+                  <h3 className="font-extrabold">{title}</h3>
+                  <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                    {text}
+                  </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </Container>
+
+      <motion.div
+        initial={{ opacity: 0, y: 34 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 1.2, ease: 'easeOut' }}
+        className="relative bg-white py-7 text-[#0F1E3A]"
+      >
+        <Container className="grid gap-6 md:grid-cols-4">
+          {[
+            [Workflow, 'Fluxuri digitale', 'Documentele urmează trasee clare.'],
+            [ShieldCheck, 'Control & audit', 'Fiecare acțiune este urmărită.'],
+            [Search, 'Căutare rapidă', 'Informația este găsită instant.'],
+            [
+              FolderOpen,
+              'Enterprise ready',
+              'Pentru organizații cu procese complexe.',
+            ],
+          ].map(([Icon, title, text], index) => (
+            <motion.div
+              key={title}
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.45,
+                delay: 1.35 + index * 0.08,
+                ease: 'easeOut',
+              }}
+              className="flex items-start gap-3"
+            >
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
+                <Icon size={22} />
+              </div>
+              <div>
+                <div className="font-extrabold">{title}</div>
+                <div className="text-sm text-slate-600">{text}</div>
+              </div>
+            </motion.div>
+          ))}
+        </Container>
+      </motion.div>
     </section>
   )
 }

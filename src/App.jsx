@@ -3,12 +3,12 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
 
 import Home from './pages/Home'
-import Solutions from './pages/Solutions'
+import Solutions from './Solutions/Solutions'
 import About from './pages/About'
 import Contact from './pages/Contact'
 
-import EMDoc from './solutions/EMDoc'
-import EMDocB2BSmartConnect from './solutions/EMDocB2BSmartConnect'
+import EMDoc from './Solutions/EMDoc'
+import EMDocB2BSmartConnect from './Solutions/EMDocB2BSmartConnect'
 
 function App() {
   return (
