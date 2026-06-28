@@ -29,7 +29,7 @@ function CTA() {
 
             <a
               href="/contact"
-              className="mt-7 inline-flex h-12 inline-flex items-center gap-2 rounded-xl bg-orange-500 px-7 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-orange-400 hover:shadow-[0_12px_35px_rgba(249,115,22,.35)]"
+              className="mt-7 inline-flex h-12 inline-flex items-center gap-2 rounded-xl bg-orange-500 px-7 py-4 font-bold text-white transition-all duration-300 hover:-translate-y-1 hover:bg-orange-600 hover:shadow-[0_12px_35px_rgba(249,115,22,.35)]"
             >
               Solicită demo <ArrowRight size={18} />
             </a>

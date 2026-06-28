@@ -26,7 +26,10 @@ const items = [
 
 function WhyExtensys() {
   return (
-    <section className="bg-[#F5F7FA] py-24">
+    <section className="relative bg-white py-20">
+      <div className="absolute inset-x-0 top-0 flex justify-center">
+        <div className="h-[2px] w-450  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+      </div>
       <Container>
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.22em] text-orange-500">
@@ -34,12 +37,12 @@ function WhyExtensys() {
           </p>
 
           <h2 className="text-4xl font-extrabold text-[#0F1E3A]">
-            Tehnologie construită pentru procese serioase.
+            Mai puțină birocrație. Mai mult control.
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-slate-600">
-            Extensys Solutions dezvoltă aplicații software orientate către
-            stabilitate, scalabilitate și rezultate măsurabile.
+            Combinăm experiența în managementul documentelor, dezvoltarea software și integrarea 
+            sistemelor pentru a crea aplicații stabile, scalabile și ușor de utilizat.
           </p>
         </div>
 

@@ -3,6 +3,9 @@ import Container from '../../layout/Container'
 function Footer() {
   return (
     <footer className="bg-[#07172f] py-12 text-white">
+      <div className="inset-x-0 top-0 flex justify-center">
+        <div className="h-px w-250 bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+      </div>
       <Container>
         <div className="grid gap-10 border-t border-white/10 pt-10 md:grid-cols-4">
           <div>
@@ -42,10 +45,15 @@ function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
+        <div className="mt-10 border-t border-white/10 pt-0 text-sm text-slate-500">
+          <div className="inset-x-0 top-0 flex justify-center">
+            <div className="h-px w-250 bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+          </div>
           © 2026 Extensys Solutions. Toate drepturile rezervate.
         </div>
+        
       </Container>
+      
     </footer>
   )
 }

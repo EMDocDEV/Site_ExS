@@ -49,13 +49,13 @@ function About() {
               Despre Extensys
             </span>
 
-            <h1 className="mt-7 text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+            <h1 className="mt-7 max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-6xl">
               Construim soluții software pentru companii care vor procese mai
               clare, mai rapide și mai inteligente.
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-              Extensys este partenerul tehnologic pentru organizații care vor să
+              Extensys Solutions este partenerul tehnologic pentru organizații care vor să
               transforme procesele interne în fluxuri digitale eficiente,
               integrate și scalabile.
             </p>

@@ -39,7 +39,10 @@ const steps = [
 
 function Process() {
   return (
-    <section className="bg-white py-24">
+    <section className="relative bg-white py-20">
+      <div className="absolute inset-x-0 top-0 flex justify-center">
+        <div className="h-[2px] w-450  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+      </div>
       <Container>
         <div className="mb-14 max-w-3xl">
           <p className="mb-3 text-sm font-extrabold uppercase tracking-[0.22em] text-orange-500">

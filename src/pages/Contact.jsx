@@ -60,6 +60,7 @@ function Contact() {
   return (
     <main className="overflow-hidden bg-[#071326] text-white">
       <section className="relative min-h-[68vh] overflow-hidden border-b border-white/10">
+      
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,115,22,0.24),transparent_36%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.16),transparent_40%)]" />
 
         <Container className="relative z-10 flex min-h-[68vh] items-center py-24">

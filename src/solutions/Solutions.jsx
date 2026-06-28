@@ -3,7 +3,6 @@ import SolutionsOverview from './components/SolutionsOverview'
 import EMDocSection from './components/EMDocSection'
 import SmartConnectSection from './components/SmartConnectSection'
 import EnterpriseSection from './components/EnterpriseSection'
-import SolutionsComparison from './components/SolutionsComparison'
 import SolutionsCTA from './components/SolutionsCTA'
 
 function Solutions() {
@@ -14,7 +13,6 @@ function Solutions() {
       <EMDocSection />
       <SmartConnectSection />
       <EnterpriseSection />
-      <SolutionsComparison />
       <SolutionsCTA />
     </main>
   )

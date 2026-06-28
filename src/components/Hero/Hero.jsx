@@ -17,7 +17,7 @@ const heroParent = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.18,
+      staggerChildren: 0.1,
     },
   },
 }
@@ -27,13 +27,14 @@ const heroItem = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: 'easeOut' },
+    transition: { duration: 0.5, ease: 'easeOut' },
   },
 }
 
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-[#0F1E3A] text-white">
+      
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroBg})` }}
@@ -114,7 +115,7 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 44, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.75, delay: 0.85, ease: 'easeOut' }}
+          transition={{ duration: 0.75, delay: 0.45, ease: 'easeOut' }}
           className="mt-45 rounded-[2rem] bg-white/92 p-8 text-[#0F1E3A] shadow-[0_30px_80px_rgba(0,0,0,.35)] backdrop-blur-xl lg:ml-auto lg:w-[460px]"
         >
           <h2 className="mb-7 text-2xl font-extrabold">
@@ -168,7 +169,7 @@ function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 34 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.65, delay: 1.2, ease: 'easeOut' }}
+        transition={{ duration: 0.65, delay: 0, ease: 'easeOut' }}
         className="relative bg-white py-7 text-[#0F1E3A]"
       >
         <Container className="grid gap-6 md:grid-cols-4">
