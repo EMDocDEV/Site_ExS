@@ -9,12 +9,13 @@ import Contact from './pages/Contact'
 
 import EMDoc from './Solutions/EMDoc'
 import EMDocB2BSmartConnect from './Solutions/EMDocB2BSmartConnect'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
-
+        <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/solutions" element={<Solutions />} />

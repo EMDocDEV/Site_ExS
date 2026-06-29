@@ -38,7 +38,8 @@ function SolutionsHero() {
           </span>
 
           <h1 className="mt-7 max-w-4xl text-4xl font-black leading-tight tracking-tight md:text-6xl">
-            Soluții digitale pentru procese clare, conectate și scalabile.
+            Soluții pentru transformarea proceselor complexe în 
+            <span className="text-orange-500"> fluxuri digitale</span> eficiente.
           </h1>
 
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">

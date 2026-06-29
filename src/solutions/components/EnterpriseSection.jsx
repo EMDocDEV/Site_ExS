@@ -47,7 +47,7 @@ function EnterpriseSection() {
   return (
     <section id="enterprise" className="relative border-y border-white/10 bg-white/[0.03] py-24">
     <div className="absolute inset-x-0 top-0 flex justify-center">
-        <div className="h-px w-250 bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+        <div className="h-[1.5px] w-430  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
       </div>
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2">

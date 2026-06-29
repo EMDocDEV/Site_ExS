@@ -5,7 +5,7 @@ function SolutionsCTA() {
   return (
     <section className="relative pb-24 pt-4">
       <div className="absolute inset-x-0 top-0 flex justify-center">
-        <div className="h-px w-250 bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+        <div className="h-[1.5px] w-430  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
       </div>
 
       <Container>

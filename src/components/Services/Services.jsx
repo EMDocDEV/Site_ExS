@@ -1,20 +1,24 @@
 import Container from '../../layout/Container'
 
+import serviceAnalyse from '../../assets/images/service-analyse.jpg'
+import serviceImplementation from '../../assets/images/service-implementation.jpg'
+import serviceSupport from '../../assets/images/service-support.jpg'
+
 const services = [
   {
-    image: '/src/assets/images/service-analyse.jpg',
+    image: serviceAnalyse,
     title: 'Analiză și proiectare procese',
     text: 'Analizăm nevoile, identificăm blocajele, stabilim fluxurile și definim împreună procesul digital optim.',
     items: ['Analiză procese', 'Modelare fluxuri operaționale', 'Plan de digitalizare'],
   },
   {
-    image: '/src/assets/images/service-implementation.jpg',
+    image: serviceImplementation,
     title: 'Configurare și implementare',
     text: 'Conectăm solutiile noastre la sistemele informatice existente și activăm procese digitale rapide și conforme.',
     items: ['Automatizare fluxuri', 'Semnătură olograf digitalizata', 'Go-live controlat'],
   },
   {
-    image: '/src/assets/images/service-support.jpg',
+    image: serviceSupport,
     title: 'Training, mentenanță și suport',
     text: 'Asigurăm asistență continuă, actualizări și instruire pentru adoptare rapidă și utilizare corectă.',
     items: ['Training utilizatori', 'Suport tehnic', 'Mentenanță și actualizări'],
@@ -25,7 +29,7 @@ function Services() {
   return (
     <section className="relative bg-white py-20">
       <div className="absolute inset-x-0 top-0 flex justify-center">
-        <div className="h-[2px] w-450  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+        <div className="h-[1.5px] w-430  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
       </div>
       <Container>
         <div className="mb-14 text-center">

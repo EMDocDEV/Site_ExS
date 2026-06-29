@@ -28,7 +28,7 @@ function WhyExtensys() {
   return (
     <section className="relative bg-white py-20">
       <div className="absolute inset-x-0 top-0 flex justify-center">
-        <div className="h-[2px] w-450  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+        <div className="h-[1.5px] w-430  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
       </div>
       <Container>
         <div className="mx-auto mb-14 max-w-3xl text-center">

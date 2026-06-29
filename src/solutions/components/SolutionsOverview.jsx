@@ -12,9 +12,10 @@ const highlights = [
 function SolutionsOverview() {
   return (
     <section id="overview" className="relative border-b border-white/10 bg-[#071326] py-20">
+      
       <div className="absolute inset-x-0 top-0 flex justify-center">
-        <div className="h-px w-250 bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
-      </div>
+      <div className="h-[1.5px] w-430  bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
+    </div>
   <Container>
         <motion.div
           initial={{ opacity: 0, y: 28 }}

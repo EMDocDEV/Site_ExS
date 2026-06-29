@@ -2,26 +2,29 @@ import { useEffect, useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import Container from '../../layout/Container'
 
+import testimonial1 from '../../assets/images/testimonial-1.jpg'
+import testimonial2 from '../../assets/images/testimonial-2.jpg'
+import testimonial3 from '../../assets/images/testimonial-3.jpg'
+
 const testimonials = [
   {
-    image: '/src/assets/images/testimonial-1.jpg',
+    image: testimonial1,
     role: 'Manager IT, organizație enterprise',
-    title: 'Procesele au devenit clare, urmărite și mult mai rapide.',
+    title: 'Procesele au devenit clare, ușor de urmărit și mult mai rapide.',
     text: 'Am redus timpul pierdut cu documentele și am obținut vizibilitate completă asupra traseului fiecărui document.',
   },
   {
-    image: '/src/assets/images/testimonial-2.jpg',
+    image: testimonial2,
     role: 'Director operațional, instituție publică',
     title: 'Aprobările nu mai depind de hârtii și emailuri pierdute.',
     text: 'EMDoc ne-a ajutat să standardizăm fluxurile și să urmărim fiecare etapă din proces.',
   },
   {
-    image: '/src/assets/images/testimonial-3.jpg',
+    image: testimonial3,
     role: 'Responsabil administrativ, unitate medicală',
     title: 'Documentele sunt găsite rapid, iar trasabilitatea este completă.',
     text: 'Echipele lucrează mai organizat, iar informația importantă este disponibilă atunci când contează.',
   },
-  
 ]
 
 function Testimonials() {
