@@ -54,8 +54,8 @@ function Process() {
           </h2>
 
           <p className="mt-5 text-lg leading-relaxed text-slate-600">
-            EMDoc transformă circuitul documentelor într-un proces digital,
-            sigur și complet trasabil.
+            Transformăm circuitele documentelor în procese digitale,
+            sigure și complet trasabile.
           </p>
         </div>
 
